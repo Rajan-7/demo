@@ -3,13 +3,13 @@
   const navLinks = document.querySelector('.nav-links');
 
   navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+     navLinks.classList.toggle('open');
   });
 
   const faqItems = document.querySelectorAll('.faq-item');
 
   faqItems.forEach(item => {
-    const question = item.querySelector('.faq-question');
+    const question = item.querySelector('.faq-content');
 
     question.addEventListener('click', () => {
       item.classList.toggle('active');
@@ -23,6 +23,17 @@
   function showPopup() {
   document.getElementById("popup").style.display = "flex";
 }
+
+let popupInterval;
+
+window.addEventListener("load",()=>{
+  if(!localStorage.getItem("subscribe")){
+     popupInterval = setInterval(()=>{
+    showPopup();
+  },20000);
+  }
+  
+})
 
 function hidePopup() {
   document.getElementById("popup").style.display = "none";
@@ -38,18 +49,26 @@ document.getElementById("popup").addEventListener("click", (e) => {
   }
 });
 
-// Show popup every 10–15 seconds
-function schedulePopup() {
-  const delay = Math.floor(Math.random() * 5000) + 10000; 
-  setTimeout(() => {
-    showPopup();
-    schedulePopup();
-  }, delay);
-}
 
-// Start scheduling after page load
-window.addEventListener("load", () => {
-  schedulePopup();
-});
+// Data sending to backend
+document.getElementById("subscribe-form").addEventListener("submit",async(e)=>{
+  e.preventDefault();
+  const email = document.getElementById("email").value;
+
+  let response = await fetch("http://localhost:3000/subscribe",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({email})
+  });
+  if(response.ok){
+    alert("✅ Subscription successful!");
+    document.getElementById("email").value = "";
+    hidePopup();
+    clearInterval(popupInterval);
+    localStorage.setItem("subscribe",true);
+  }else{
+    alert("🔴 Error saving email");
+  }
+})
 
 

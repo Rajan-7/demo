@@ -38,7 +38,8 @@ body {
 .navbar .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.8rem 2rem;
+  /* padding: 0.8rem 2rem; */
+  padding: 0.8rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,6 +49,7 @@ body {
   color: #92fe9d;
   font-weight: 700;
   font-size: 1.5rem;
+  /* padding-left: 1.3rem; */
   text-decoration: none;
   font-family: 'Playfair', serif;
 }
@@ -151,7 +153,9 @@ header img {
 
 /* Sections */
 section {
-  padding: 4rem 5rem 0rem;
+  max-width: 1200px;
+  margin:0 auto;
+    /* padding: 0.8rem 2rem; */
   text-align: center;
   scroll-margin-top: 4.2rem;
 }
@@ -374,6 +378,24 @@ li {
 
 .faq-item.active .faq-answer {
   display: block;
+}
+
+.faq-content{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-plus{
+  cursor: pointer;
+}
+
+.fa-plus:hover{
+  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+  -moz-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  -o-transform: scale(1.3);
 }
 
 /* Access section */
