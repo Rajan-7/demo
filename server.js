@@ -1,6 +1,4 @@
-// import express from "express";
-// import mongoose from "mongoose";
-// import dotenv from "dotenv";
+
 const express = require("express")
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
@@ -11,6 +9,18 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+// Email transporter
+
+const nodemailer = require("nodemailer");
+
+const transporter = nodemailer.createTransport({
+  service:"gmail",
+  auth:{
+    user : process.env.EMAIL_USER,
+    pass : process.env.EMAIL_PASS
+  }
+});
 
 
 
@@ -26,12 +36,30 @@ const Email = mongoose.model("Email",EmailSchema);
 // API route
 app.post("/subscribe",async(req,res)=>{
   try{
-    const newEmail = new Email({email:req.body.email});
+    // const newEmail = new Email({email:req.body.email});
+    // await newEmail.save();
+    // res.status(201).send("Email saved");
+    const {email} = req.body;
+
+    const newEmail = new Email({email});
     await newEmail.save();
-    res.status(201).send("Email saved");
+
+    // send notification
+    await transporter.sendMail({
+      from:`The Genius Wave <${process.env.EMAIL_USER}`,
+      to:email,
+      subject:"Welcome to The Genius Wave 🌊",
+      text : "Thank you for subscribing! Stay tuned for exclusive updates.",
+      html: `<h2>Welcome to <span style="color:blue">The Genius    Wave</span> 🌊</h2>
+             <p>You're officially part of our community. Expect special updates soon.</p>`
+    });
+
+    res.status(201).send("Email saved & notification sent");
   }catch(err){
-    res.status(500).send("Error saving email");
+    console.error(err);
+    res.status(500).send("Error saving email or sending notification");
   }
+ 
 })
 
 // Starting server
