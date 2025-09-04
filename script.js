@@ -30,7 +30,7 @@ window.addEventListener("load",()=>{
   if(!localStorage.getItem("subscribe")){
      popupInterval = setInterval(()=>{
     showPopup();
-  },20000);
+  },10000);
   }
   
 })
