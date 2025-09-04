@@ -35,12 +35,13 @@ const Email = mongoose.model("Email",EmailSchema);
 
 // API route
 app.post("/subscribe",async(req,res)=>{
+    console.log("Api Hit");
   try{
     // const newEmail = new Email({email:req.body.email});
     // await newEmail.save();
     // res.status(201).send("Email saved");
     const {email} = req.body;
-
+    console.log(email,"sent");
     const newEmail = new Email({email});
     await newEmail.save();
 
@@ -55,6 +56,7 @@ app.post("/subscribe",async(req,res)=>{
     });
 
     res.status(201).send("Email saved & notification sent");
+    console.log("Success");
   }catch(err){
     console.error(err);
     res.status(500).send("Error saving email or sending notification");
