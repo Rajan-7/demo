@@ -148,9 +148,9 @@ header img {
 }
 
 iframe{
-  height: 820px;
-  width: 100%;
+  
   border:none;
+
 }
 
 .video-wrapper video {
@@ -462,6 +462,11 @@ footer {
 
   .navbar{
     padding:0 1rem;
+  }
+
+  iframe{
+    height: 250px;
+    width: 364px;
   }
 
   section p,.testimonial-text,.faq-question{
