@@ -52,7 +52,14 @@ app.post("/subscribe",async(req,res)=>{
       subject:"Welcome to The Genius Wave 🌊",
       text : "Thank you for subscribing! Stay tuned for exclusive updates.",
       html: `<h2>Welcome to <span style="color:blue">The Genius    Wave</span> 🌊</h2>
-             <p>You're officially part of our community. Expect special updates soon.</p>`
+             <p>You're officially part of our community. Expect special updates soon.</p>
+             <p>For more information, click the link below</p>
+             <a href="https://bdd6a3x-psdu6w66pgvg4a1q41.hop.clickbank.net" 
+                style="display:inline-block; margin-top:10px; padding:10px 20px; 
+                background:#004e92; color:white; text-decoration:none; 
+                border-radius:5px;">
+                Visit Us
+             </a>`
     });
 
     res.status(201).send("Email saved & notification sent");

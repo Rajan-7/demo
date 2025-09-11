@@ -406,6 +406,7 @@ a{
 
 .faq-answer {
   display: none;
+  cursor: pointer;
   font-size: 1.1rem;
   color: #fff;
   padding-top: 0.5rem;
