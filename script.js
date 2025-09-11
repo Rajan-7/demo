@@ -55,7 +55,7 @@ document.getElementById("subscribe-form").addEventListener("submit",async(e)=>{
   e.preventDefault();
   const email = document.getElementById("email").value;
 
-  let response = await fetch("https://demo2-d05j.onrender.com//subscribe",{
+  let response = await fetch("https://demo2-d05j.onrender.com/subscribe",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({email})
