@@ -1,4 +1,5 @@
 // http://localhost:3000
+// http://demo2-d05j.onrender.com
 
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
@@ -55,7 +56,7 @@ document.getElementById("subscribe-form").addEventListener("submit",async(e)=>{
   e.preventDefault();
   const email = document.getElementById("email").value;
 
-  let response = await fetch("https://demo2-d05j.onrender.com/subscribe",{
+  let response = await fetch("http://localhost:3000/subscribe",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({email})
