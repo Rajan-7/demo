@@ -56,7 +56,7 @@ document.getElementById("subscribe-form").addEventListener("submit",async(e)=>{
   e.preventDefault();
   const email = document.getElementById("email").value;
 
-  let response = await fetch("http://localhost:3000/subscribe",{
+  let response = await fetch("https://globalapp-name-0d4885bd142a.herokuapp.com/subscribe",{
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({email})
