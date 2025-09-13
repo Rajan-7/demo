@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 html {
@@ -52,7 +52,7 @@ body {
   font-size: 1.5rem;
   /* padding-left: 1.3rem; */
   text-decoration: none;
-  font-family: 'Playfair', serif;
+  font-family: "Playfair", serif;
 }
 
 .navbar .nav-links {
@@ -133,13 +133,11 @@ header img {
   background-color: #92fe9d;
 } */
 
-
-
 /* Video Wrapper */
 .video-wrapper {
   position: relative;
   width: 90%;
-  padding-bottom: 56.25%; 
+  padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   margin: 2rem 0;
@@ -147,10 +145,8 @@ header img {
   /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
 }
 
-iframe{
-  
-  border:none;
-
+iframe {
+  border: none;
 }
 
 .video-wrapper video {
@@ -164,9 +160,9 @@ iframe{
 /* Sections */
 section {
   max-width: 1200px;
-  margin:0 auto;
+  margin: 0 auto;
   margin-bottom: 4rem;
-    padding: 0.8rem 4rem;
+  padding: 0.8rem 4rem;
   text-align: center;
   scroll-margin-top: 4.2rem;
 }
@@ -206,11 +202,9 @@ li {
 
 .fa-circle-plus {
   margin-right: 0.5rem;
-  color:#92fe9d ;
+  color: #92fe9d;
   font-size: 1.3rem;
-
 }
-
 
 /* Highlight */
 .highlight {
@@ -218,13 +212,13 @@ li {
   font-weight: bold;
 }
 
-.highlight_head{
-  color:#29a346;
+.highlight_head {
+  color: #29a346;
   font-weight: bold;
 }
 
 /* Benefits */
-.benefit_points{
+.benefit_points {
   display: flex;
   justify-content: space-between;
   gap: 0.8rem;
@@ -237,7 +231,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
   align-items: center;
@@ -254,11 +248,11 @@ li {
   width: 90%;
   text-align: center;
   position: relative;
-  box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 .popup-box h2 {
-  font-family: 'Playfair', serif;
+  font-family: "Playfair", serif;
   margin-bottom: 0.5rem;
 }
 
@@ -301,11 +295,10 @@ li {
   cursor: pointer;
 }
 
-a{
+a {
   list-style: none;
   text-decoration: none;
 }
-
 
 /* Testimonials */
 .testimonial-container {
@@ -326,7 +319,11 @@ a{
 }
 
 .testimonial-box {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.02)
+  );
   border-left: 5px solid #92fe9d;
   padding: 1.5rem 2rem;
   border-radius: 20px;
@@ -360,8 +357,8 @@ a{
 }
 
 .fa-star-half-stroke,
-.fa-star{
-  color:yellow;
+.fa-star {
+  color: yellow;
 }
 
 /* FAQ section */
@@ -416,19 +413,19 @@ a{
   display: block;
 }
 
-.faq-content{
+.faq-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.fa-plus{
+.fa-plus {
   cursor: pointer;
-  color:rgb(122, 219, 122);
-  font-size:1.1rem;
+  color: rgb(122, 219, 122);
+  font-size: 1.1rem;
 }
 
-.fa-plus:hover{
+.fa-plus:hover {
   transform: scale(1.3);
   -webkit-transform: scale(1.3);
   -moz-transform: scale(1.3);
@@ -456,38 +453,39 @@ footer {
     display: block;
   }
 
-  .benefit_points{
+  .benefit_points {
     flex-direction: column;
-    gap:0;
+    gap: 0;
   }
 
-  .navbar{
-    padding:0 1rem;
+  .navbar {
+    padding: 0 1rem;
   }
 
-  iframe{
+  iframe {
     height: 250px;
     width: 364px;
   }
 
-  section p,.testimonial-text,.faq-question{
+  section p,
+  .testimonial-text,
+  .faq-question {
     font-size: 1rem;
   }
 
-  section h3{
+  section h3 {
     font-size: 1.2rem;
     margin-bottom: 0.4rem;
   }
 
-  li{
+  li {
     font-size: 1rem;
   }
 
-  header,section{
+  header,
+  section {
     margin-bottom: 1rem;
   }
-
-  
 
   .navbar .nav-links {
     position: fixed;
@@ -512,7 +510,7 @@ footer {
     font-size: 1.2rem;
   }
 
-  footer{
+  footer {
     margin-top: 1rem;
   }
 }
