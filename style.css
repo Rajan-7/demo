@@ -12,12 +12,12 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, #000428, #004e92);
+  background: #d291bc;
   color: white;
   line-height: 1.6;
   overflow-x: hidden;
   height: 100%;
-  padding-top: 4rem;
+  padding-top: 0rem;
 }
 
 /* Navbar Styles */
@@ -26,11 +26,7 @@ body {
   padding: 0.8rem 4rem;
   top: 0;
   width: 100%;
-  background: linear-gradient(
-    to right,
-    rgba(0, 4, 40, 0.85),
-    rgba(0, 78, 146, 0.85)
-  );
+  background: #e75480;
   backdrop-filter: blur(12px);
   z-index: 10000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
@@ -88,7 +84,7 @@ body {
 
 /* Header */
 header {
-  padding: 4rem 5rem 0rem;
+  padding: 6rem 5rem 0rem;
   text-align: center;
   display: flex;
   align-items: center;
@@ -98,8 +94,9 @@ header {
 }
 
 header h1 {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
   margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 
 header p {
@@ -116,10 +113,15 @@ header img {
   display: block;
 }
 
+header a {
+  margin-top: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
 /* Buttons */
 .btn {
-  background-color: #92fe9d;
-  color: #000;
+  background-color: #e75480;
+  color: #fff;
   padding: 0.75rem 1.5rem;
   border: none;
   font-size: 1rem;
@@ -129,20 +131,20 @@ header img {
   transition: background-color 0.3s ease;
 }
 
-/* .btn:hover {
-  background-color: #92fe9d;
-} */
-
 /* Video Wrapper */
-.video-wrapper {
-  position: relative;
-  width: 90%;
-  padding-bottom: 56.25%;
-  height: 0;
-  overflow: hidden;
-  margin: 2rem 0;
-  border-radius: 12px;
-  /* box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); */
+
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  outline: none;
+  margin: 1rem 0;
 }
 
 iframe {
@@ -164,7 +166,7 @@ section {
   margin-bottom: 4rem;
   padding: 0.8rem 4rem;
   text-align: center;
-  scroll-margin-top: 4.2rem;
+  scroll-margin-top: 6rem;
 }
 
 section h2 {
@@ -202,18 +204,18 @@ li {
 
 .fa-circle-plus {
   margin-right: 0.5rem;
-  color: #92fe9d;
+  color: #888888;
   font-size: 1.3rem;
 }
 
 /* Highlight */
 .highlight {
-  color: #92fe9d;
+  color: #e75480;
   font-weight: bold;
 }
 
 .highlight_head {
-  color: #29a346;
+  color: #e75480;
   font-weight: bold;
 }
 
@@ -222,6 +224,110 @@ li {
   display: flex;
   justify-content: space-between;
   gap: 0.8rem;
+}
+
+.benefit_points {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.benefit_points ul {
+  flex: 1;
+  min-width: 300px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#benefits li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-align: left;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  color: #fff;
+}
+
+#benefits .fa-heart {
+  color: #ff4d4d;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+
+#benefits li:hover .fa-heart {
+  transform: scale(1.2);
+  transition: transform 0.2s ease;
+}
+
+/* hero-instinct section */
+#hero-instinct {
+  color: #fff;
+  padding: 5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#hero-instinct h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  line-height: 1.4;
+  width: 100%;
+}
+
+#hero-instinct .highlight {
+  color: #e75480;
+  font-weight: 700;
+}
+
+.hero-instinct-details {
+  flex: 1 1 55%;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.hero-instinct-details p {
+  margin-bottom: 1.2rem;
+}
+
+.hero-instinct-details a {
+  color: #0074d9;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.hero-instinct-details a:hover {
+  color: #e75480;
+}
+
+.hero-instinct-image {
+  flex: 1 1 40%;
+  text-align: center;
+}
+
+.hero-instinct-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease;
+}
+
+.hero-instinct-image img:hover {
+  transform: scale(1.05);
 }
 
 /* Popup Overlay */
@@ -298,6 +404,10 @@ li {
 a {
   list-style: none;
   text-decoration: none;
+}
+
+#benefits .fa-heart {
+  color: #ff4d4d;
 }
 
 /* Testimonials */
@@ -421,7 +531,7 @@ a {
 
 .fa-plus {
   cursor: pointer;
-  color: rgb(122, 219, 122);
+  color: #00ff88;
   font-size: 1.1rem;
 }
 
@@ -447,59 +557,33 @@ footer {
   margin-top: 4rem;
 }
 
-/* Responsive */
-@media (max-width: 824px) {
+/* Responsive Design */
+
+/* Medium Devices max-width 992px */
+@media (max-width: 992px) {
   .nav-toggle {
     display: block;
-  }
-
-  .benefit_points {
-    flex-direction: column;
-    gap: 0;
+    z-index: 1000;
   }
 
   .navbar {
     padding: 0 1rem;
   }
 
-  iframe {
-    height: 250px;
-    width: 364px;
-  }
-
-  section p,
-  .testimonial-text,
-  .faq-question {
-    font-size: 1rem;
-  }
-
-  section h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.4rem;
-  }
-
-  li {
-    font-size: 1rem;
-  }
-
-  header,
-  section {
-    margin-bottom: 1rem;
-  }
-
   .navbar .nav-links {
     position: fixed;
     top: 60px;
     right: 0;
-    background: rgba(0, 0, 0, 0.95);
-    height: 500px;
     width: 220px;
+    height: 28rem;
+    background-color: #000 !important;
     flex-direction: column;
     padding-top: 2rem;
     gap: 1.5rem;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.8);
+    z-index: 9999;
   }
 
   .navbar .nav-links.open {
@@ -510,11 +594,34 @@ footer {
     font-size: 1.2rem;
   }
 
-  footer {
-    margin-top: 1rem;
+  #hero-instinct {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 1.5rem;
+  }
+
+  #hero-instinct h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .hero-instinct-details {
+    flex: 1 1 100%;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-instinct-image {
+    flex: 1 1 100%;
+    margin-top: 2rem;
+  }
+
+  .hero-instinct-image img {
+    max-width: 90%;
   }
 }
 
+/* Small Devices 768px */
 @media (max-width: 768px) {
   header,
   section,
@@ -524,6 +631,7 @@ footer {
 
   header h1 {
     font-size: 2rem;
+    padding-top: 2rem;
   }
 
   header p,
@@ -531,16 +639,16 @@ footer {
   section h3,
   ul,
   .faq-item {
-    padding: 0 1rem;
+    padding: 0 0.8rem;
   }
 
-  img {
+  header img {
     width: 90%;
+    height: auto;
   }
 
   section h2 {
     font-size: 1.7rem;
-    padding: 0 1rem;
   }
 
   .testimonial-container {
@@ -551,114 +659,25 @@ footer {
 
   .testimonial-box {
     width: 100%;
+    max-width: 100%;
   }
 }
 
-/* Extra Small Devices: max-width 400px */
+/* Extra Small Devices max-width 400px */
 @media (max-width: 400px) {
   .navbar {
-    padding: 0rem 0.5rem;
+    padding: 0 0.5rem;
   }
 
   .navbar .nav-links {
     width: 180px;
-    height: 400px;
+    height: calc(100% - 55px);
     top: 55px;
     padding-top: 1.5rem;
+    background: #000;
   }
 
   .navbar .nav-links li a {
     font-size: 1rem;
-  }
-
-  header {
-    padding: 1rem 0.5rem 0rem;
-    margin-bottom: 2rem;
-  }
-
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  header p {
-    font-size: 0.95rem;
-    max-width: 100%;
-    margin-bottom: 0.8rem;
-  }
-
-  header img {
-    max-width: 100%;
-    margin: 0.5rem auto;
-  }
-
-  section {
-    padding: 0.5rem 0.5rem;
-    margin-bottom: 2rem;
-  }
-
-  section h2 {
-    font-size: 1.4rem;
-  }
-
-  section h3 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  section p,
-  ul li {
-    font-size: 0.9rem;
-  }
-
-  .btn {
-    padding: 0.5rem 1rem;
-    font-size: 0.85rem;
-  }
-
-  iframe {
-    width: 100%;
-    height: 200px;
-  }
-
-  .testimonial-container {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem 0.5rem;
-  }
-
-  .testimonial-box {
-    min-width: 100%;
-    max-width: 100%;
-    padding: 1rem 1rem;
-  }
-
-  .testimonial-text {
-    font-size: 0.9rem;
-  }
-
-  .testimonial-author {
-    font-size: 0.85rem;
-  }
-
-  .faq-section {
-    padding: 0.5rem 0.5rem;
-  }
-
-  .faq-item {
-    padding: 0.8rem 1rem;
-  }
-
-  .faq-question {
-    font-size: 1rem;
-  }
-
-  .faq-answer {
-    font-size: 0.9rem;
-  }
-
-  footer {
-    padding: 1rem 0.5rem;
-    font-size: 0.8rem;
-    margin-top: 1rem;
   }
 }
