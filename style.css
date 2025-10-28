@@ -598,7 +598,7 @@ footer {
     right: 0;
     width: 220px;
     height: 28rem;
-    background-color: #000 !important;
+    background: #000 !important;
     flex-direction: column;
     padding-top: 2rem;
     gap: 1.5rem;
@@ -693,7 +693,7 @@ footer {
 
   .navbar .nav-links {
     width: 180px;
-    height: calc(100% - 55px);
+    height: 28rem;
     top: 55px;
     padding-top: 1.5rem;
     background: #000;
