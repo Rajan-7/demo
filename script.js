@@ -48,6 +48,25 @@ document.getElementById("popup").addEventListener("click", (e) => {
   }
 });
 
+// redirecting to new page
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("subscribe-btn");
+  const form = document.getElementById("subscribe-form");
+
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    // open new tab
+    window.open(
+      "https://hop.clickbank.net/?affiliate=guddu110&vendor=hissecret&lp=0&tid=fb",
+      "_blank"
+    );
+
+    // reset the form after redirect
+    form.reset();
+  });
+});
+
 // Data sending to backend
 document
   .getElementById("subscribe-form")
