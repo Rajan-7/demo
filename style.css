@@ -149,6 +149,7 @@ header a {
 
 iframe {
   border: none;
+  margin: 1rem 0;
 }
 
 .video-wrapper video {
