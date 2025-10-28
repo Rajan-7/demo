@@ -702,4 +702,8 @@ footer {
   .navbar .nav-links li a {
     font-size: 1rem;
   }
+
+  .video-wrapper {
+    padding-bottom: 95%;
+  }
 }
