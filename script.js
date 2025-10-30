@@ -75,7 +75,7 @@ document
     const email = document.getElementById("email").value;
 
     let response = await fetch(
-      "https://globalapp-name-0d4885bd142a.herokuapp.com/subscribe",
+      "https://demo-backend-rhxb.onrender.com/subscribe",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
